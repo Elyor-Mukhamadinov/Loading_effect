@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #111;
+}
+.container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ring{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 8px solid transparent;
+    border-radius: 50%;
+    margin: -60px;
+    border-top: 8px solid #24ecff;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.ring:nth-child(1){
+    border-top:  4px solid transparent;
+    border-left: 4px solid #24ecff;
+}
+.ring:nth-child(1)::before{
+    top: initial;
+    bottom: 24px;
+    left: 24px;
+}
+.ring::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #24ecff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #24ecff33, 0 0 0 20px #24ecff22, 0 0 0 40px #24ecff11, 0 0 40px #24ecff, 0 0 100px #24ecff;
+}
+.ring:nth-child(2){
+    animation-delay: -1s;
+    border-top:  4px solid transparent;
+    border-left: 4px solid #93ff2d;
+}
+.ring:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #93ff2d;
+    top: initial;
+    bottom: 24px;
+    left: 24px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #93ff2d33, 0 0 0 20px #93ff2d22, 0 0 0 40px #93ff2d11, 0 0 40px #93ff2d, 0 0 100px #93ff2d;
+}
+.ring:nth-child(3){
+    position: absolute;
+    top: -133.32px;
+    animation-delay: -2s;
+    border-top:  4px solid transparent;
+    border-left:  4px solid #e41cf8;
+}
+.ring:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e41cf8;
+    top: initial;
+    bottom: 24px;
+    left: 24px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #e41cf833, 0 0 0 20px #e41cf822, 0 0 0 40px #e41cf811, 0 0 40px #e41cf8, 0 0 100px #e41cf8;
+}
+p{
+    position: absolute;
+    color: #fff;
+    font-size: 3em;
+    font-family: consolas;
+    bottom: -160px;
+    letter-spacing: 0.3em;
+}
